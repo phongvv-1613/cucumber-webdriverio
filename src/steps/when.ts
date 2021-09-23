@@ -16,6 +16,14 @@ import selectOptionByIndex from '../support/action/selectOptionByIndex';
 import setCookie from '../support/action/setCookie';
 import setInputField from '../support/action/setInputField';
 import setPromptText from '../support/action/setPromptText';
+import { inputLoginInfo, pressLoginButton } from '../support/action/loginPageAction';
+
+When(
+    /^I input phone number "([^"]*)?" and password "([^"]*)?"$/,
+    inputLoginInfo
+);
+
+When(/^I press login button$/, pressLoginButton);
 
 When(
     /^I (click|doubleclick) on the (link|button|element) "([^"]*)?"$/,

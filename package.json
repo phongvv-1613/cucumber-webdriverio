@@ -30,10 +30,14 @@
     "test:lint": "eslint 'src/**/*.ts' 'test/**/*.js!(setup.js)'",
     "test:unit": "jest --config=jest.config.js --detectOpenHandles",
     "test:features": "wdio run wdio.BUILD.conf.ts",
-    "wdio": "wdio run wdio.conf.ts"
+    "wdio": "wdio run wdio.conf.ts",
+    "report": "allure generate  && allure open"
   },
-  "dependencies": {},
+  "dependencies": {
+    "allure-commandline": "^2.13.8"
+  },
   "devDependencies": {
+    "@wdio/allure-reporter": "^5.0.0",
     "@types/jest": "^26.0.21",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",

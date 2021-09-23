@@ -8,6 +8,7 @@ export default async (type: 'url' | 'site', page: string) => {
      * The URL to navigate to
      * @type {String}
      */
+    // await browser.execute('localStorage.clear()');
     const url = (type === 'url') ? page : browser.options.baseUrl + page;
     await browser.url(url);
 };

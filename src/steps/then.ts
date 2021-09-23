@@ -31,6 +31,12 @@ import isVisible from '../support/check/isDisplayed';
 import waitFor from '../support/action/waitFor';
 import waitForVisible from '../support/action/waitForDisplayed';
 import checkIfElementExists from '../support/lib/checkIfElementExists';
+import { checkSnackbarMessage } from '../support/action/loginPageAction';
+
+Then(
+    /^I should see error snackbar with content "([^"]*)?"$/,
+    checkSnackbarMessage
+);
 
 Then(
     /^I expect that the title is( not)* "([^"]*)?"$/,
